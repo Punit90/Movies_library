@@ -37,3 +37,9 @@ body{
   flex-direction: row;
   justify-content: space-between;
 }
+
+.load-text{
+  color: white;
+  font-size: xx-large;
+  margin-top: 5rem;
+}

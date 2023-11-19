@@ -85,7 +85,7 @@ function App() {
             <Nav 
             className="me-auto my-2 my-lg-3"
             style={{maxHeight:'100px'}}
-            navbarScroll></Nav>
+            navbarScroll />
 
             <Form className="d-flex" autoComplete="off">
               <FormControl
@@ -124,7 +124,7 @@ function App() {
         </div>
         ):(
           // Used when there is delay in response while searching
-        <div className='text=3xl text-center' style={{color:"white", fontSize:"xx-large", marginTop:"5rem"}}>Loading.......</div>
+        <div className='text=3xl text-center load-text'>Loading.......</div>
        )} 
 
     </div>
