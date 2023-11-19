@@ -1,0 +1,39 @@
+body{
+  background-color: black !important;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+.container{
+  width: 100%;
+  margin: 1em auto;
+}
+
+.grid{
+  display: grid;
+  margin-left: .5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.2em;
+  justify-content: center;
+}
+
+.infoModal{
+  font-size: 16px; 
+  font-weight: 500; 
+  color: white; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-transform: capitalize; 
+  text-overflow: ellipsis;
+  padding: 0rem 0.5rem;
+}
+
+.info-modal-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
