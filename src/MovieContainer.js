@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import image from './images/image_not_found.png'
+import "./movieContainer.css";
 
 function MovieContainer({title, vote_average, overview, poster_path, release_date, original_language}) {
 
@@ -17,11 +18,13 @@ function MovieContainer({title, vote_average, overview, poster_path, release_dat
     return(
         <div className="card text-center bg-secondary mb-4">
             <div className="card-body">
-                <img className="card-img-top" src= {poster_path != null ? IMAGE_URL+poster_path : image} alt=""/>
+                <img className="card-img-top" 
+                    src= {poster_path != null ? IMAGE_URL+poster_path : image} 
+                    alt=""/>
             </div>
             <div className="info-modal-body">
                 <span className="infoModal">{title}</span>
-                <span className="infoModal" style={{color:'gold'}}>{vote_average}</span>
+                <span className="infoModal rating">{vote_average}</span>
             </div>
             <div className="card-body">
                 <Button variant="outline-light" onClick={handleOpen}>Movie Info</Button>
@@ -31,18 +34,21 @@ function MovieContainer({title, vote_average, overview, poster_path, release_dat
                     <Modal.Header closeButton>
                         <Modal.Title>{title}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body style={{background:"#353535", color:"white"}}>
-                        <div style={{display:"flex", alignItems:"flex-start", justifyContent:"center"}}>
-                            <div style={{flexBasis:"70%", marginRight:"5%"}}>
-                                <img style={{width: '14rem'}} className="card-img-top" src= {poster_path != null ? IMAGE_URL+poster_path : image} alt=""/>
+                    <Modal.Body className="modal-body">
+                        <div className="modal-body-container">
+                            <div className="modal-image">
+                                <img style={{width: '14rem'}} 
+                                    className="card-img-top" 
+                                    src= {poster_path != null ? IMAGE_URL+poster_path : image} 
+                                    alt=""/>
                             </div>
-                            <div style={{fontSize:"14px", paddingLeft:"20px", width:"70%"}}>
+                            <div className="modal-title">
                                 <h5>
                                     {title}
                                 </h5>
                                 <h6 style={{textTransform:"capitalize"}}>Language : <span>{original_language}</span></h6>
                                 <h6>
-                                    IMDB : <span style={{color:"gold"}}>{vote_average}</span>
+                                    IMDB : <span className="rating">{vote_average}</span>
                                 </h6>
                                 <h6>
                                     Release Date : <span>{release_date}</span>

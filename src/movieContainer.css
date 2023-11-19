@@ -1,0 +1,21 @@
+.rating{
+    color: gold;
+}
+.modal-body{
+    background-color: #353535;
+    color: white
+}
+.modal-body-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.modal-image{
+    flex-basis:70%;
+    margin-right:5%
+}
+.modal-title{
+    font-size: 14px;
+    padding-left: 20px;
+    width: 70%;
+}
